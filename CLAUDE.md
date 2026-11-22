@@ -27,3 +27,12 @@
 - design tokens 集中在一处，所有场景共用。
 - 有配音时，先出音频，按音频时长排画面。
 - 交付前截图/抽帧自查：文字溢出、对比度、节奏。
+
+## 技术坑（实战记录）
+- GSAP 对 `scaleX(0)` 的元素读不出 CSS 里的 rotate：旋转放在外层容器，内层只做 scale。
+- 用 clip-path 拼接的两块面板，抖动或抗锯齿时会露出缝：下面垫一层完整底板，切开的那一刻再撤掉。
+- 竖排大标题（writing-mode: vertical-rl）要加 `white-space: nowrap`，否则视口矮时会拆成多列、阅读顺序错乱。
+- rsync 复制项目时不要 `--exclude dist`，会把 node_modules 里各个包的 dist 也排除掉。
+
+## 作品
+- `projects/zanpakuto`：斬魄刀（BLEACH 致敬）。纸白 → 卍解一刀切开 → 纯黑；朱红只在刀光出现一次。
