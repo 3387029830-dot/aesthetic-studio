@@ -34,5 +34,3 @@
 - 竖排大标题（writing-mode: vertical-rl）要加 `white-space: nowrap`，否则视口矮时会拆成多列、阅读顺序错乱。
 - rsync 复制项目时不要 `--exclude dist`，会把 node_modules 里各个包的 dist 也排除掉。
 
-## 作品
-- `projects/zanpakuto`：斬魄刀（BLEACH 致敬）。纸白 → 卍解一刀切开 → 纯黑；朱红只在刀光出现一次。
