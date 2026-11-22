@@ -23,3 +23,8 @@ out/
 *.wav
 *.flac
 *.ncm
+
+# 3D 车模（第三方授权素材，不上传）
+assets/cars/*
+!assets/cars/.gitkeep
+*.blend1

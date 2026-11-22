@@ -23,3 +23,10 @@ export HYPERFRAMES_NO_TELEMETRY=1
 export HYPERFRAMES_SKIP_SKILLS=1
 export REMOTION_DISABLE_TELEMETRY=1
 export PATH="$STUDIO/tools/npm-global/bin:$PATH"
+
+# Blender：程序在 tools/Blender.app，配置/脚本/扩展都锁在本目录
+export BLENDER_USER_RESOURCES="$STUDIO/.home/blender"
+export BLENDER_USER_CONFIG="$STUDIO/.home/blender/config"
+export BLENDER_USER_SCRIPTS="$STUDIO/.home/blender/scripts"
+export BLENDER_USER_EXTENSIONS="$STUDIO/.home/blender/extensions"
+export BLENDER_USER_DATAFILES="$STUDIO/.home/blender/datafiles"
