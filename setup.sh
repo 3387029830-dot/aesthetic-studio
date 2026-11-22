@@ -18,8 +18,9 @@ source ./env.sh
 
 if [ ! -x tools/bin/ffmpeg ]; then
   mkdir -p tools/media && (cd tools/media && npm init -y >/dev/null && npm i ffmpeg-static ffprobe-static)
-  ln -sf "$STUDIO/tools/media/node_modules/ffmpeg-static/ffmpeg" tools/bin/ffmpeg
-  ln -sf "$STUDIO/tools/media/node_modules/ffprobe-static/bin/darwin/$ARCH/ffprobe" tools/bin/ffprobe
+  # 相对链接：整个文件夹移动后仍可用
+  ln -sfn ../media/node_modules/ffmpeg-static/ffmpeg tools/bin/ffmpeg
+  ln -sfn ../media/node_modules/ffprobe-static/bin/darwin/$ARCH/ffprobe tools/bin/ffprobe
 fi
 
 for t in templates/remotion-starter templates/web-starter; do (cd "$t" && npm ci); done
