@@ -16,3 +16,10 @@ out/
 .DS_Store
 .env
 .env.*
+
+# 音乐文件（版权素材，不上传）
+*.m4a
+*.mp3
+*.wav
+*.flac
+*.ncm
