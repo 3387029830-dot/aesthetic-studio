@@ -1,0 +1,43 @@
+/* Design tokens — 所有页面共用，改这里即可换风格 */
+:root {
+  --bg: #000;
+  --fg: #f5f5f7;
+  --muted: #86868b;
+  --accent: #2997ff;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --gutter: clamp(16px, 5vw, 80px);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html.lenis, html.lenis body { height: auto; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.015em;
+}
+
+section { min-height: 100vh; padding: 0 var(--gutter); display: grid; place-items: center; text-align: center; }
+
+.hero { align-content: center; gap: 24px; }
+.eyebrow { color: var(--accent); font-size: clamp(16px, 1.6vw, 24px); font-weight: 600; }
+.headline { font-size: clamp(56px, 11vw, 180px); font-weight: 700; line-height: 0.95; letter-spacing: -0.04em; }
+.sub { color: var(--muted); font-size: clamp(17px, 1.8vw, 28px); }
+
+.pin { height: 100vh; }
+.pin-inner h2 { font-size: clamp(40px, 7vw, 120px); font-weight: 700; letter-spacing: -0.03em; }
+.pin-inner h2:nth-child(2) {
+  background: linear-gradient(90deg, #a1c4fd, #c2e9fb, #fbc2eb);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+.big-type { max-width: 18ch; font-size: clamp(36px, 5.5vw, 88px); font-weight: 600; line-height: 1.1; }
+.big-type .word { opacity: 0.15; display: inline-block; }
+
+footer { padding: 80px var(--gutter); color: var(--muted); font-size: 13px; text-align: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .big-type .word { opacity: 1; }
+}

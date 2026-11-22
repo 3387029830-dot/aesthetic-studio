@@ -1,0 +1,18 @@
+# 本地工具与缓存（用 setup.sh 重新生成）
+tools/
+.home/
+.cache/
+
+# 依赖与产物
+node_modules/
+dist/
+out/
+.hyperframes/
+*.mp4
+*.mov
+*.webm
+
+# 系统 / 密钥
+.DS_Store
+.env
+.env.*
