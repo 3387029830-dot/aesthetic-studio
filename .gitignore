@@ -28,3 +28,4 @@ out/
 assets/cars/*
 !assets/cars/.gitkeep
 *.blend1
+*.blend
